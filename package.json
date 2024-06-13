@@ -1,0 +1,34 @@
+{
+  "name": "dfs-smart-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "clean": "npx hardhat clean && npm compile",
+    "test-clean": "npm run clean && npm test",
+    "deploy": "npm run compile && npm run withdraw && npx hardhat run scripts/deploy.ts --network bsc",
+    "prep": "npx hardhat exec prep --network bsc",
+    "buy": "npx hardhat exec buy --network bsc",
+    "sell": "npx hardhat exec sell --network bsc",
+    "withdraw": "npx hardhat exec withdraw --network bsc",
+    "withdrawToken": "npx hardhat exec withdrawToken --network bsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@defi-wonderland/smock": "2.3.4",
+    "@nomicfoundation/hardhat-chai-matchers": "1.0.6",
+    "@nomicfoundation/hardhat-toolbox": "2.0.2",
+    "@typescript-eslint/eslint-plugin": "5.57.1",
+    "@typescript-eslint/parser": "5.57.1",
+    "eslint": "8.37.0",
+    "hardhat": "2.13.0",
+    "prettier": "2.8.7"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.8.2"
+  }
+}
